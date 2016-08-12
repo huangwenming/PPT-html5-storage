@@ -1,0 +1,58 @@
+.fengmian, .mulu, .moban-ul, .moban-ul-1{
+  text-align: center;
+}
+h1{
+  margin-bottom: 20px;
+}
+.fengmian strong{
+  font-family: 'SimSun';
+  font-size: 80%;
+}
+.fengmian p{
+  position: relative;
+  left: 300px;
+  top: 100px;
+  font-family: 'KaiTi';
+  font-size: 60%;
+}
+.mulu ul{
+  text-align: left;
+  font-size: 80%;
+}
+.moban-ul ul{
+  text-align: left;
+  font-size: 60%;
+}
+.moban-ul li{
+  margin-top: 20px;
+}
+.moban-ul p{
+  text-align: left;
+  font-size: 60%;
+  text-indent: 2em;
+}
+.moban-ul img{
+  max-width: 1000px;
+  max-height: 600px;
+}
+.moban-ul-1 img{
+  float: right;
+  max-width: 500px;
+  max-height: 600px;
+}
+.moban-ul-1 ul{
+  clear: left;
+  float: left;
+  text-align: left;
+  font-size: 50%;
+  width: 300px;
+}
+.moban-ul-1 h1{
+  margin-bottom: 20px;
+  float: left;
+}
+.moban-ul-1 p{
+  text-align: left;
+  font-size: 50%;
+  text-indent: 2em;
+}

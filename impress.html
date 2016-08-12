@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+<head>
+  　　<title>darren - Impress demo</title>
+  　　<meta charset="utf-8" />
+  　　<link href="css/impress-demo.css" rel="stylesheet" />
+      <link href="css/custom.css" rel="stylesheet" />
+</head>
+<body>
+<div class="impress-not-supported">
+</div>
+　　<div id="impress">
+      <div class="step" data-x="0" data-y="0">
+        <div class="fengmian">
+          <h1>前端存储类型与使用场景</h1>
+          <strong>By 黄文明</strong><br>
+          <p>2016.8.12</p>
+        </div>
+      </div>
+      <div class="step" data-x="1200" data-y="0" data-scale="0.5" >
+        <div class="mulu">
+          <h1>目录</h1>
+          <ul>
+            <li>背景与意义</li>
+            <li>前端存储的类型</li>
+            <li>前端存储与页面优化</li>
+          </ul>
+        </div>
+      </div>
+    <div class="step" data-x="2400" data-y="0" data-scale="0.5">
+      <div class="moban-ul">
+        <h1>背景与意义</h1>
+        <ul>
+          <li>（1）前端存储的种类较多，但通常使用的比较少</li>
+          <li>（2）前端存储的作用没有被充分发挥</li>
+        </ul>
+       </div>
+    </div>
+  <div class="step" data-x="3600" data-y="0" data-scale="0.5">
+    <div class="moban-ul">
+      <h1>前端存储的类型</h1>
+      <img src="img/存储种类.png">
+    </div>
+  </div>
+  <div class="step" data-x="3600" data-y="1000" data-scale="0.5">
+    <div class="moban-ul">
+      <h1>前端存储类型</h1>
+      <ul>
+        <li>（1）使用方法</li>
+        <li>（2）特点</li>
+        <li>（3）使用场景</li>
+      </ul>
+    </div>
+  </div>
+  <div class="step" data-x="4800" data-y="0" data-scale="0.5">
+    <div class="moban-ul">
+      <h1>cookie-使用方法</h1>
+      <p>cookie是一串字符串，每次发请求时被携带到服务端</p>
+      <p>cookie通过document.cookie='key=value[;prop=propValue]'进行设置，参见demo;</p>
+      <p>其中常用的属性设置:expires,path,domain,HttpOnly;HttpOnly在后端进行设置</p>
+    </div>
+  </div>
+  <div class="step" data-x="4800" data-y="1000" data-scale="0.5">
+  <div class="mulu">
+    <h1>cookie-特点</h1>
+    <ul>
+      <li>访问限制：（path（默认根目录）+ domain（默认当前域名））</li>
+      <li>时长限制：（默认session级别[退出浏览器清除]，指定时长expires）</li>
+      <li>存储空间：不同浏览器的每个域名cookie的限制个数不同，一般为50个</li>
+    </ul>
+  </div>
+</div>
+    <div class="step" data-x="4800" data-y="2000" data-scale="0.5">
+        <div class="mulu">
+            <h1>cookie-使用场景</h1>
+            <p>
+                由于cookie放在请求头中，每次请求时都要携带，所以一般不需要在cookie中存放东西，只需要存放同步登录时必须要携带到服务端的信息。
+            </p>
+        </div>
+    </div>
+    <div class="step" data-x="6000" data-y="0" data-scale="0.5">
+        <div class="moban-ul">
+            <h1>sessionStorage-使用方法</h1>
+            <p>sessionStorage是webStorage的一种，通过key-value形式存储数据。</p>
+            <p>通过sessionStorage.setItem(key, value)进行设置，参见demo;</p>
+            <p>sessionStorage存储在客户端，服务端取不到。</p>
+        </div>
+    </div>
+    <div class="step" data-x="6000" data-y="1000" data-scale="0.5">
+        <div class="mulu">
+            <h1>sessionStorage-特点</h1>
+            <ul>
+                <li>访问限制：只能在设定域访问，而且tab之间不能互通，支持刷新。</li>
+                <li>时长限制：tab页关闭时清除</li>
+                <li>存储空间：5M左右</li>
+            </ul>
+        </div>
+    </div>
+    <div class="step" data-x="6000" data-y="2000" data-scale="0.5">
+        <div class="mulu">
+            <h1>sessionStorage-使用场景</h1>
+            <p>
+                建议存储一些当前页面刷新需要存储，且不需要在tab关闭时候留下的信息；例如检测用户是否刷新进入页面，音乐播放进度记录等。
+            </p>
+        </div>
+    </div>
+    <div class="step" data-x="7200" data-y="0" data-scale="0.5">
+        <div class="moban-ul">
+            <h1>localStorage-使用方法</h1>
+            <p>localStorage是webStorage的一种，通过key-value形式存储数据。</p>
+            <p>通过localStorage.setItem(key, value)进行设置，value只能为字符串，参见demo;</p>
+            <p>localStorage存储在客户端，服务端取不到。</p>
+        </div>
+    </div>
+    <div class="step" data-x="7200" data-y="1000" data-scale="0.5">
+        <div class="mulu">
+            <h1>localStorage-特点</h1>
+            <ul>
+                <li>访问限制：只能在设定域访问，支持tab互通，刷新和浏览器关闭</li>
+                <li>时长限制：用户不清除的情况下，永久存储</li>
+                <li>存储空间：5M左右，可通过JSON.stringify(localStorage).length来检测已占用空间</li>
+            </ul>
+        </div>
+    </div>
+    <div class="step" data-x="7200" data-y="2000" data-scale="0.5">
+        <div class="mulu">
+            <h1>localStorage-使用场景</h1>
+            <p>
+                服务器难以承载其压力，但又要与用户的信息绑定的话，可以使用localStorage存储一些状态，这样即能缓解服务端压力，也可以存储用户的数据，详见demo。
+            </p>
+        </div>
+    </div>
+    <div class="step" data-x="8400" data-y="0" data-scale="0.5">
+        <div class="moban-ul">
+            <h1>WebSQL-使用方法</h1>
+            <p>WebSQL是web存储的重型武器，目前已不维护，但兼容性极好。</p>
+            <p>WebSQL类似关系数据库，通过sql语句进行操作，参见demo;</p>
+        </div>
+    </div>
+    <div class="step" data-x="8400" data-y="1000" data-scale="0.5">
+        <div class="mulu">
+            <h1>WebSQL-特点</h1>
+            <ul>
+                <li>访问限制：只能在创建数据库的域下访问，不能指定访问域名。</li>
+                <li>时长限制：用户不清除的情况下，永久存储</li>
+                <li>存储空间：没有限制</li>
+            </ul>
+        </div>
+    </div>
+    <div class="step" data-x="8400" data-y="2000" data-scale="0.5">
+        <div class="mulu">
+            <h1>WebSQL-使用场景</h1>
+            <p>
+                需要存储大量信息时，localStorage空间不够时，可以考虑使用，例如地图离线数据，用户换肤图片等。
+            </p>
+        </div>
+    </div>
+    <div class="step" data-x="8400" data-y="3000" data-scale="0.5">
+        <div class="moban-ul">
+            <h1>IndexedDB-使用方法</h1>
+            <p>IndexedDB也是web存储的重型武器，正在推广，但低于android4.4、ios7不支持。</p>
+            <p>WebSQL类似nosql，通过js进行操作，参见demo;</p>
+        </div>
+    </div>
+    <div class="step" data-x="9600" data-y="0" data-scale="0.5">
+        <div class="mulu">
+            <h1>前端存储与页面优化—百度移动首页为例</h1>
+            <ul>
+                <li>资源内嵌(首页所需的js和css内嵌在html中)</li>
+                <li>缓存(不变的js、css、tpl、小图片存储在前端)</li>
+                <li>文件接口(脚本文件通过接口全部返回)</li>
+                <li>懒加载(按需加载)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="step" data-x="9600" data-y="1000" data-scale="0.5">
+        <div class="moban-ul">
+            <h1>百度移动首页—缓存策略</h1>
+            <img src="img/localstorage应用.png">
+        </div>
+    </div>
+    <div class="step" data-x="9600" data-y="2000" data-scale="0.5">
+        <div class="moban-ul">
+            <h1>前端缓存策略—fis3-postpackage-cacheresource插件</h1>
+            <ul>
+                <li>链接：https://github.com/huangwenming/fis3-postpackager-cacheresource</li>
+                <li>demo：http://cp01-rdqa-dev177.cp01.baidu.com:8000/games/newbattle/index.html</li>
+                <li>备注：暂时只支持js文件存储</li>
+            </ul>
+        </div>
+    </div>
+      <div class="step" data-x="10800" data-y="0" data-scale="0.5">
+        <div class="moban-ul">
+          <h1>Thanks！</h1>
+        </div>
+      </div>
+      <div id="overview" class="step" data-x="7000" data-y="3000" data-scale="8"></div>
+  　</div>
+　　<script src="js/impress.js"></script>
+　　<script>impress().init();</script>
+</body>
+</html>
